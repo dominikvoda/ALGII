@@ -1,4 +1,4 @@
-CONSOLE APPLICATION : Project (Simulace obchodu B)
+Project (Simulace obchodu B)
 =================================================
 
 **Author:** Dominik Voda (VOD0034) d.voda94@gmail.com
