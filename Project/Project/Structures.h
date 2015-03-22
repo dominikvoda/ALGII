@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Queue.h"
+#include "Constants.h"
+
+using namespace std;
 
 struct Costumer;
 struct Market;
-
-using namespace QueueInArray;
-using namespace std;
+struct Queue;
 
 struct Costumer{
 	unsigned int id;
@@ -16,5 +16,16 @@ struct Costumer{
 struct Market
 {
 	int costumers = 0;
-	Queue cashDesks[NUM_CASHDESKS];
+	Queue * cashDesks[NUM_CASHDESKS];
+};
+
+struct Queue{
+	int size = MAX_COSTUMERS / NUM_CASHDESKS;
+	Costumer * costumers[MAX_COSTUMERS / NUM_CASHDESKS];
+	int head = 0;
+	int tail = 0;
+	int numberOfItems = 0;
+
+	void put(Costumer * x);
+	Costumer * get();
 };

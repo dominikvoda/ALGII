@@ -21,7 +21,7 @@ namespace QueueInArray
 		/**
 		* Pole obsahující data uložená do fronty.
 		*/
-		Costumer Data[MAX_COSTUMERS / NUM_CASHDESKS];
+		Costumer * Data;
 		/**
 		* Hlava fronty tj. ukazatel na první prvek fronty v poli {@link #Data}.
 		*/

@@ -1,13 +1,12 @@
 #include "Structures.h"
-#include "Functions.h"
+#include "Functions.cpp"
 #include <iostream>
 
 using namespace std;
-using namespace Functions;
 
 int main()
 {
-	Market * market = new Market;
+	Market * market;
 
 	firstInit(market);
 

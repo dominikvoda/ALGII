@@ -1,7 +1,9 @@
 #include "Structures.h"
-#include "Constants.h"
+#include <iostream>
 
-namespace Functions{
-	void firstInit(Market * market);
-	void createNewCostumer(Market * market);
-}
+
+void firstInit(Market * market);
+
+void createNewCostumer(Market * market);
+
+int findShortestQueue(Market * market);
