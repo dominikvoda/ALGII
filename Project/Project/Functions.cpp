@@ -1,3 +1,7 @@
+/**
+* @author Dominik Voda [VOD0034]
+*/
+
 #include "Structures.h"
 #include "Functions.h"
 #include <iostream>
@@ -54,6 +58,7 @@ int findShortestQueue(Market * market){
 	}
 	return tmp;
 }
+
 void onSales(Market * market){
 	for (size_t i = 0; i < NUM_CASHDESKS; i++){
 		if (market->cashDesks[i]->numberOfItems > 0){

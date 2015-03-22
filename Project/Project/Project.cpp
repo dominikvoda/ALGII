@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/**
+* Main function of Project
+* @author Dominik Voda [VOD0034]
+*/
 int main()
 {
 	Market * market = new Market();
