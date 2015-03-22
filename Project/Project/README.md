@@ -11,6 +11,6 @@ Project.cpp - File contains main function main()
 Functions.cpp - File contains all sub functions of App
 
 **Header files of project:**
-Constants.h - Define all constants
-Functions.h - Define all sub functions of App
-Structures.h - Define all structures of App
+Constants.h - Define all constants 
+Functions.h - Define all sub functions of App 
+Structures.h - Define all structures of App 
