@@ -2,39 +2,15 @@
     CONSOLE APPLICATION : Project Project Overview
 ========================================================================
 
-AppWizard has created this Project application for you.
+Author: Dominik Voda (VOD0034) d.voda94@gmail.com
 
-This file contains a summary of what you will find in each of the files that
-make up your Project application.
+Project properties: http://www.cs.vsb.cz/dvorsky/Download/ALGII/Projekty1.pdf - Task 8 (Simulace obchodu B)
 
+Source files of project:
+Project.cpp - File contains main function main()
+Functions.cpp - File contains all sub functions of App
 
-Project.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-Project.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Project.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Project.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+Header files of project:
+Constants.h - Define all constants
+Functions.h - Define all sub functions of App
+Structures.h - Define all structures of App
