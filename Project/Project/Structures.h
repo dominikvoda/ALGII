@@ -15,16 +15,16 @@ struct Costumer{
 
 struct Market
 {
-	int costumers = 0;
+	int costumers;
+	int costumersInQueue;
 	Queue * cashDesks[NUM_CASHDESKS];
 };
 
 struct Queue{
-	int size = MAX_COSTUMERS / NUM_CASHDESKS;
-	Costumer * costumers[MAX_COSTUMERS / NUM_CASHDESKS];
-	int head = 0;
-	int tail = 0;
-	int numberOfItems = 0;
+	Costumer * costumers[MAX_COSTUMERS];
+	int head;
+	int tail;
+	int numberOfItems;
 
 	void put(Costumer * x);
 	Costumer * get();

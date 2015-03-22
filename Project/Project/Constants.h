@@ -1,3 +1,3 @@
-#define NUM_CASHDESKS 5
-#define MAX_COSTUMERS 50
-#define MAX_PRODUCTS 10
+#define NUM_CASHDESKS 2
+#define MAX_COSTUMERS 3
+#define MAX_PRODUCTS 5

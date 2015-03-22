@@ -7,3 +7,5 @@ void firstInit(Market * market);
 void createNewCostumer(Market * market);
 
 int findShortestQueue(Market * market);
+
+void onSales(Market * market);

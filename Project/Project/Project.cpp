@@ -1,20 +1,21 @@
 #include "Structures.h"
-#include "Functions.cpp"
+#include "Functions.h"
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	Market * market;
+	Market * market = new Market();
 
 	firstInit(market);
 
-	while (market->costumers < MAX_COSTUMERS){
+	while (market->costumersInQueue > 0){
+		onSales(market);
 		createNewCostumer(market);
 	}
 
-	cout << market->costumers << endl;
+	cout << "Market is closed" << endl;
 
 	return 0;
 }
