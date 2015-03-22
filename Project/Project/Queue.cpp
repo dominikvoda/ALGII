@@ -1,4 +1,5 @@
 #include "Queue.h"
+#include "Structures.h"
 #include <iostream>
 #include <iomanip>
 
@@ -8,6 +9,7 @@ namespace QueueInArray
 	void Init(Queue& Q)
 	{
 		Q.Head = Q.Tail = 0;
+		Q.Data = new Costumer[MAX_COSTUMERS / NUM_CASHDESKS];
 	}
 
 	void Clear(Queue& Q)
@@ -15,7 +17,7 @@ namespace QueueInArray
 		Q.Head = Q.Tail = 0;
 	}
 
-	void Put(Queue& Q, const int X)
+	void Put(Queue& Q, Costumer X)
 	{
 		if (!IsFull(Q))
 		{
@@ -29,19 +31,20 @@ namespace QueueInArray
 		}
 	}
 
-	int Get(Queue& Q)
+	Costumer Get(Queue& Q)
 	{
 		if (!IsEmpty(Q))
 		{
-			int x = Q.Data[Q.Head];
+			Costumer x = Q.Data[Q.Head];
 			Q.Head += 1;
 			Q.Head %= Q.QueueSize;
 			return x;
 		}
 		else
 		{
+			Costumer x;
 			cerr << "Underflow!" << endl;
-			return 0;
+			return x;
 		}
 	}
 
@@ -53,20 +56,6 @@ namespace QueueInArray
 	bool IsFull(const Queue& Q)
 	{
 		return Q.Head == (Q.Tail + 1) % Q.QueueSize;
-	}
-
-	void Report(const Queue& Q)
-	{
-		cout << "Queue report" << endl;
-		cout << "--------------------------" << endl;
-		cout << "Head: " << Q.Head << endl;
-		cout << "Tail: " << Q.Tail << endl;
-		for (int i = 0; i < Q.QueueSize; i++)
-		{
-			cout << i << "   " << Q.Data[i] << endl;
-		}
-		cout << "--------------------------" << endl;
-		cout << endl;
 	}
 
 };
