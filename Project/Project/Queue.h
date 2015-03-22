@@ -1,4 +1,5 @@
 #include "Constants.h"
+#include "Structures.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ namespace QueueInArray
 		/**
 		* Pole obsahující data uložená do fronty.
 		*/
-		int * Data;
+		Costumer Data[MAX_COSTUMERS / NUM_CASHDESKS];
 		/**
 		* Hlava fronty tj. ukazatel na první prvek fronty v poli {@link #Data}.
 		*/
@@ -60,7 +61,7 @@ namespace QueueInArray
 	* @param Q Fronta
 	* @return Prvek z hlavy fronty
 	*/
-	int Get(Queue& Q);
+	Costumer Get(Queue& Q);
 
 	/**
 	* Test je-li fronta prázdná.
@@ -77,12 +78,5 @@ namespace QueueInArray
 	* @return Funkce vrací true pokud je fronta plná, jinak false.
 	*/
 	bool IsFull(const Queue& Q);
-
-	/**
-	* Pomocná funkce, která zobrazuje vnitøní strukturu fronty.
-	*
-	* @param Q Fronta
-	*/
-	void Report(const Queue& Q);
 
 }

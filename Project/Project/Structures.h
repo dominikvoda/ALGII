@@ -2,17 +2,11 @@
 
 #include "Queue.h"
 
-struct CashDesk;
 struct Costumer;
 struct Market;
 
 using namespace QueueInArray;
-
-struct CashDesk
-{
-	unsigned int currentCostumers;
-	Queue q;
-};
+using namespace std;
 
 struct Costumer{
 	unsigned int id;
@@ -21,6 +15,6 @@ struct Costumer{
 
 struct Market
 {
-	CashDesk * cashDesks;
-	Costumer * costumers;
+	int costumers = 0;
+	Queue cashDesks[NUM_CASHDESKS];
 };

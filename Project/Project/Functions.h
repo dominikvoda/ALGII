@@ -2,6 +2,6 @@
 #include "Constants.h"
 
 namespace Functions{
-	void firstInit(Market * market, CashDesk * desks);
-	void createNewCostumer();
+	void firstInit(Market * market);
+	void createNewCostumer(Market * market);
 }

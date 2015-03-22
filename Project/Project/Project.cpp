@@ -1,18 +1,21 @@
-#include "Queue.h"
 #include "Structures.h"
 #include "Functions.h"
+#include <iostream>
 
 using namespace std;
-using namespace QueueInArray;
 using namespace Functions;
 
 int main()
 {
-	CashDesk * desks = new CashDesk[NUM_CASHDESKS];
-	Costumer * costumers = new Costumer[MAX_COSTUMERS];
 	Market * market = new Market;
 
-	firstInit(market, desks);
+	firstInit(market);
+
+	while (market->costumers < MAX_COSTUMERS){
+		createNewCostumer(market);
+	}
+
+	cout << market->costumers << endl;
 
 	return 0;
 }
