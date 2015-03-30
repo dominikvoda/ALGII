@@ -44,10 +44,10 @@ void createNewCostumer(Market * market){
 	int queueCostumers = market->cashDesks[queue]->numberOfItems + 1;
 	newCostumer->id = ++market->costumers;
 	newCostumer->products = rand() % MAX_PRODUCTS;
-	cout << "G" << newCostumer->id << "[" << newCostumer->products << "]" << endl;
+	cout << "G" << newCostumer->id << "[" << newCostumer->products << "] ";
 	market->cashDesks[queue]->put(newCostumer);
 	market->costumersInQueue++;
-	cout << "V" << newCostumer->id << "[F" << queue << "]" << "[" << queueCostumers << "]" << endl;
+	cout << "V" << newCostumer->id << "[F" << queue << "]" << "[" << queueCostumers << "] ";
 }
 
 int findShortestQueue(Market * market){
@@ -66,13 +66,13 @@ void onSales(Market * market){
 			Costumer * currentCostumer = market->cashDesks[i]->costumers[head];
 			if (currentCostumer->products > 0){
 				currentCostumer->products--;
-				cout << "K" << currentCostumer->id << "[" << currentCostumer->products << "]" << endl;
+				cout << "K" << currentCostumer->id << "[" << currentCostumer->products << "] ";
 			}
 			else{
 				market->cashDesks[i]->get();
 				int queueCostumers = market->cashDesks[i]->numberOfItems;
 				market->costumersInQueue--;
-				cout << "O" << currentCostumer->id << "[F" << i << "]" << "[" << queueCostumers << "]" << endl;
+				cout << "O" << currentCostumer->id << "[F" << i << "]" << "[" << queueCostumers << "] ";
 			}
 		}
 	}
