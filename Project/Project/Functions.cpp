@@ -43,7 +43,7 @@ void createNewCostumer(Market * market){
 	int queue = findShortestQueue(market);
 	int queueCostumers = market->cashDesks[queue]->numberOfItems + 1;
 	newCostumer->id = ++market->costumers;
-	newCostumer->products = rand() % MAX_PRODUCTS;
+	newCostumer->products = rand() % (MAX_PRODUCTS +1);
 	cout << "G" << newCostumer->id << "[" << newCostumer->products << "] ";
 	market->cashDesks[queue]->put(newCostumer);
 	market->costumersInQueue++;
