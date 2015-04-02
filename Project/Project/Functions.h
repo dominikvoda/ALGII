@@ -21,6 +21,7 @@ void createNewCostumer(Market * market);
 /**
 * Find shortest Queue and return index
 * @param market pointer to Market
+* @return Queue index
 */
 int findShortestQueue(Market * market);
 
@@ -29,3 +30,9 @@ int findShortestQueue(Market * market);
 * @param market pointer to Market
 */
 void onSales(Market * market);
+
+/**
+* Dealocate memory
+* @param market pointer to Market
+*/
+void cleanMemory(Market * market);

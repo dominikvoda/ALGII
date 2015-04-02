@@ -33,7 +33,7 @@ struct Market
 	*/
 	int costumers;
 	/**
-	* @var int number of costumers who are in queue
+	* @var int number of costumers who are in queues
 	*/
 	int costumersInQueue;
 	/**
