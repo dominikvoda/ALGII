@@ -81,3 +81,15 @@ void onSales(Market * market){
 		}
 	}
 }
+
+void cleanMemory(Market * market){
+	for (size_t i = 0; i < NUM_CASHDESKS; i++){
+		for (size_t j = 0; j < MAX_COSTUMERS; j++){
+			/*Delete costumers in queue [i]*/
+			delete market->cashDesks[i]->costumers[j];
+		}
+		/*Delete queue [i]*/
+		delete market->cashDesks[i];		
+	}
+	delete market;
+}
